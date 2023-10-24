@@ -5,20 +5,23 @@
 # task01b: 63876
 # task01c: 63891
 import json
-def find(task = "task01a.txt"):
-    with open(task,'r') as task1a:
-        data = task1a.read()
-        temp = json.loads(data)
-        temp.sort()
-        return temp
+class main():
+    def find(self,task = "task01a.txt"):
+        with open(task,'r') as task1a:
+            data = task1a.read()
+            temp = json.loads(data)
+            temp.sort()
+            print(temp[-1])
+            return temp[-1]
 
-    
-find()
-find("task01b.txt")
-find("task01c.txt")
+    def __init__(self) -> None:
+
+        self.find()#BOO
+        self.find("task01b.txt")
+        self.find("task01c.txt")
 
 
-
+main()
 
 
 
